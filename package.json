@@ -1,0 +1,34 @@
+{
+  "name": "qvtmf-monorepo",
+  "private": true,
+	"workspaces": [
+		"./apps/*",
+		"./packages/*"
+	],
+  "scripts": {
+    "go": "concurrently \"wsrun --parallel go\"",
+    "lint": "concurrently \"wsrun --parallel lint\"",
+    "lint-fix": "concurrently \"wsrun --parallel lint-fix\"",
+    "prettier-check": "concurrently \"wsrun --parallel prettier-check\"",
+    "prettier-fix": "concurrently \"wsrun --parallel prettier-fix\"",
+    "lerna:go": "lerna run go --stream --parallel",
+    "lerna:build": "lerna run build"
+  },
+  "devDependencies": {
+    "concurrently": "7.2.2",
+    "lerna": "^4.0.0",
+    "pre-commit": "^1.2.2",
+    "wsrun": "5.2.4"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "volta": {
+    "node": "16.13.2",
+    "npm": "8.1.4"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}

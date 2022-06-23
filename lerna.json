@@ -1,0 +1,13 @@
+{
+  "npmClient": "npm",
+  "packages": [
+    "apps/*",
+    "packages/*"
+  ],
+  "version": "0.0.1",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": ["--no-package-lock", "--legacy-peer-deps"]
+    }
+  }
+}

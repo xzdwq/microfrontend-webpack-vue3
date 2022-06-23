@@ -1,0 +1,11 @@
+{
+  "name": "@qvtmf/shared",
+  "version": "0.0.1",
+  "exports": {
+    "./tailwind-config/tailwind.base.js": "./tailwind-config/tailwind.base.js",
+    "./tailwind-config/tailwind.color.js": "./tailwind-config/tailwind.color.js"
+  },
+  "scripts": {
+    "go": "echo '@qvtmf/shared ready'"
+  }
+}
